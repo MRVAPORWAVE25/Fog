@@ -364,7 +364,7 @@
                         if (userData.banned === true) {
                             localStorage.removeItem('uid');
                             auth.signOut().then(() => {
-                                window.location.href = "accounts";
+                                
                             });
                         } else {
                             displayAccountDetails(uid, userData.full_name);
@@ -375,11 +375,11 @@
                     }
                 }).catch(error => {
                     console.error('Error fetching user data:', error);
-                    window.location.href = "accounts/#newuser";
+                   
                 });
             } else {
                 console.log('No user is logged in.');
-                window.location.href = "accounts/#newuser";
+                
             }
         };
     </script>

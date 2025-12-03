@@ -339,46 +339,25 @@
         const auth = firebase.auth();
         const database = firebase.database();
 
-        function getUid() {
-            return localStorage.getItem('uid');
         }
 
-        function checkAdminStatus(uid) {
-            const userRef = database.ref('users/' + uid);
-            return userRef.once('value').then((snapshot) => {
-                return snapshot.val();
+     
             });
         }
 
-        function displayAccountDetails(uid, fullName) {
-            console.log(`User ID: ${uid}, Full Name: ${fullName}`);
+     
         }
 
-        window.onload = function () {
-            const uid = getUid();
+     
 
-            if (uid) {
-                console.log('User is logged in with UID:', uid);
-                checkAdminStatus(uid).then(userData => {
-                    if (userData) {
-                        if (userData.banned === true) {
-                            localStorage.removeItem('uid');
-                            auth.signOut().then(() => {
+
                                 
                             });
-                        } else {
-                            displayAccountDetails(uid, userData.full_name);
-                            if (userData.admin === true) {
-                                document.getElementById('adminButton').style.display = 'block';
+
                             }
                         }
                     }
-                }).catch(error => {
-                    console.error('Error fetching user data:', error);
-                   
-                });
-            } else {
-                console.log('No user is logged in.');
+   
                 
             }
         };

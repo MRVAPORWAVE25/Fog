@@ -62,43 +62,6 @@
         const auth = firebase.auth();
         const database = firebase.database();
 
-        function getUid() {
-            return localStorage.getItem('uid');
-        }
-
-        function checkAdminStatus(uid) {
-            const userRef = database.ref('users/' + uid);
-            return userRef.once('value').then((snapshot) => {
-                return snapshot.val();
-            });
-        }
-
-        window.onload = function () {
-            const uid = getUid();
-
-            if (uid) {
-                console.log('User logged in with UID:', uid);
-                checkAdminStatus(uid).then(userData => {
-                    if (userData) {
-                        if (userData.banned === true) {
-                            localStorage.removeItem('uid');
-                            auth.signOut().then(() => {
-                                window.location.href = "../accounts";
-                            });
-                        } else {
-                            console.log('User is unbanned');
-                        }
-                    } else {
-                        console.error('User data not found');
-                        window.location.href = "../accounts/#newuser";
-                    }
-                }).catch(error => {
-                    console.error('Error fetching user data:', error);
-                    // window.location.href = "../accounts/#newuser";
-                });
-            } else {
-                console.log('No user is logged in.');
-                window.location.href = "../accounts/#newuser";
             }
         };
     </script>

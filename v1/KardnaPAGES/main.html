@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-44TM52GM2B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-44TM52GM2B');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PP6772XP');</script>
+    <!-- End Google Tag Manager -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3724985851304355"
+            crossorigin="anonymous"></script>
+    <title>Fog</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" id="themeStylesheetlink">
+    <script src="particles.js"></script>
+    <script src="./index.js"></script>
+
+    <title>Fog Menu</title>
+    <script>
+        document.onkeydown = function (e) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }</script>
+</head>
+<style>
+    * {
+        font-family: 'A', sans-serif;
+    }
+
+    h1 {
+        margin: 0 0 0 0;
+    }
+
+    body {
+        overflow-y: scroll;
+        height: 30in;
+
+    }
+
+    #myDiv {
+        display: none;
+        z-index: 99999999999999999;
+    }
+
+    #search-bar {
+        text-align: center;
+        margin: 20px 0;
+        color: white;
+    }
+
+    #search-input {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center; /* Center the items vertically */
+    }
+
+        section a {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #000;
+            transition: transform 0.2s ease-in-out; /* Add a smooth transition */
+        }
+
+            section a:hover {
+                transform: scale(1.1); /* Increase size by 10% on hover */
+            }
+
+        section img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 15px; /* Same border-radius as the parent <a> element */
+        }
+
+    #removeLagButton {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        background-color: #4d4c4c;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PP6772XP"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <iframe src="../scripts/clouds.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;"></iframe>
+    <div id="search-bar">
+        <label for="search-input">Search Games:</label>
+        <input type="text" id="search-input" oninput="filterGames()">
+    </div>
+
+    <section>
+        <a onclick="myFunction()" href="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://590384729-104728463944275026.preview.editmysite.com/uploads/b/139890129-446136497302390429/files/ting.xml&container=ig">
+            <img src="https://i.ibb.co/QH46w71/image.png" alt="there is no game">
+       
+
+    </section>
+
+    <script>
+        function removeCloudsIframes() {
+            const scriptEnabled = document.cookie.split('; ').find(row => row.startsWith('scriptEnabled='));
+
+            if (scriptEnabled) {
+                const iframes = document.querySelectorAll('iframe[src="../scripts/clouds.html"]');
+                iframes.forEach(iframe => {
+                    iframe.remove();
+                });
+            } else {
+                const iframeContainer = document.createElement('iframe');
+                iframeContainer.setAttribute('id', 'MyFrame');
+                iframeContainer.setAttribute('src', '../scripts/clouds.html');
+                iframeContainer.setAttribute('style', 'position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;');
+                document.body.appendChild(iframeContainer);
+            }
+        }
+
+        removeCloudsIframes();
+    </script>
+
+    <script>
+        function filterGames() {
+            var searchInput = document.getElementById('search-input').value.toLowerCase();
+            var games = document.querySelectorAll('section a');
+
+            games.forEach(function (game) {
+                var alt = game.querySelector('img').getAttribute('alt').toLowerCase();
+
+                if (alt.includes(searchInput)) {
+                    game.style.display = 'inline-block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <script>
+        // Function to sort games alphabetically
+        function sortGames() {
+            var gameContainer = document.getElementById("gameContainer");
+            var games = gameContainer.children;
+
+            // Convert the NodeList to an array for sorting
+            var gamesArray = Array.from(games);
+
+            // Sort the array alphabetically based on alt attribute of the images
+            gamesArray.sort(function (a, b) {
+                var altA = a.querySelector("img").alt.toUpperCase();
+                var altB = b.querySelector("img").alt.toUpperCase();
+                if (altA < altB) {
+                    return -1;
+                }
+                if (altA > altB) {
+                    return 1;
+                }
+                return 0;
+            });
+
+            // Clear the container
+            gameContainer.innerHTML = "";
+
+            // Append the sorted games to the container
+            gamesArray.forEach(function (game) {
+                gameContainer.appendChild(game);
+            });
+        }
+
+        // Call the sorting function when the page loads
+        window.onload = sortGames;
+    </script>
+    <script>
+        function gameSource(game) {
+            // Extract the current domain from the URL
+            const currentDomain = window.location.hostname;
+
+            // Check if the current domain is a Netlify subdomain
+            if (currentDomain.endsWith('.netlify.app')) {
+                // Replace the subdomain with "sourcefog"
+                const newDomain = currentDomain.replace(/^[^.]+/, 'sourcefog');
+
+                // Construct the new URL
+                const newUrl = `https://${newDomain}/play/${game}`;
+
+                // Open the URL in the same tab
+                window.location.href = newUrl;
+            } else {
+                // Split the domain into parts
+                const domainParts = currentDomain.split('.');
+
+                // Check if there are three parts (subdomain.domain.tld)
+                if (domainParts.length === 3) {
+                    // Replace the first part with "source"
+                    domainParts[0] = 'source';
+                } else {
+                    // If not, add "source" as a subdomain
+                    domainParts.unshift('source');
+                }
+
+                // Construct the new domain
+                const newDomain = domainParts.join('.');
+
+                // Construct the new URL
+                const newUrl = `https://${newDomain}/play/${game}`;
+
+                // Open the URL in the same tab
+                window.location.href = newUrl;
+            }
+        }
+    </script>
+
+
+</body>
+</html>
